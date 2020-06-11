@@ -84,7 +84,3 @@ let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
-noremap <c-1> 1gt
-noremap <c-2> 2gt
-
-
