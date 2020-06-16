@@ -2,6 +2,12 @@
 
 set -e
 
+if [ -d "${HOME}/.vim/autoload" ] || [ -d "${HOME}/.vim/bundle" ]; then
+    echo "Vim install already detected."
+    echo "Run rm -rf ~/.vim/* to clean up first."
+    exit 1
+fi
+
 echo "Creating ~/.vim directories..."
 mkdir -p ~/.vim/autoload ~/.vim/bundle
 
