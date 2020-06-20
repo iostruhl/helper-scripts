@@ -1,9 +1,15 @@
 " load pathogen
 execute pathogen#infect()
-filetype plugin on
+filetype plugin indent on
+
+" set <Leader>
+let mapleader = ","
 
 " show line numbers
 set number
+
+" allow unsaved changes in buffers
+set hidden
 
 " turn on syntax highlighting
 syntax on
@@ -79,13 +85,7 @@ fun! s:LongLineHLToggle()
  endif
 endfunction
 
-" snippets
-let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<c-b>"
-let g:UltiSnipsJumpBackwardTrigger="<c-z>"
-
-let mapleader = ","
-
+" quick tab switching
 nnoremap <Leader>1 1gt
 nnoremap <Leader>2 2gt
 nnoremap <Leader>3 3gt
@@ -96,3 +96,7 @@ nnoremap <Leader>7 7gt
 nnoremap <Leader>8 8gt
 nnoremap <Leader>9 9gt
 nnoremap <Leader>0 10gt
+
+" NERDTree commands
+nnoremap <Leader>n :NERDTreeToggle<cr>
+
