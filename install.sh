@@ -29,7 +29,7 @@ git clone https://github.com/ycm-core/YouCompleteMe.git ~/.vim/bundle/YouComplet
 
 echo "Running YouCompleteMe install with CXX support only..."
 git -C ~/.vim/bundle/YouCompleteMe submodule update --init --recursive
-/usr/bin/python3 ~/.vim/bundle/YouCompleteMe/install.py --clangd-completer
+python3 ~/.vim/bundle/YouCompleteMe/install.py --clangd-completer
 
 echo "Done."
 
