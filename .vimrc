@@ -86,17 +86,21 @@ fun! s:LongLineHLToggle()
 endfunction
 
 " quick tab switching
-nnoremap <Leader>1 1gt
-nnoremap <Leader>2 2gt
-nnoremap <Leader>3 3gt
-nnoremap <Leader>4 4gt
-nnoremap <Leader>5 5gt
-nnoremap <Leader>6 6gt
-nnoremap <Leader>7 7gt
-nnoremap <Leader>8 8gt
-nnoremap <Leader>9 9gt
-nnoremap <Leader>0 10gt
+noremap <Leader>1 1gt
+noremap <Leader>2 2gt
+noremap <Leader>3 3gt
+noremap <Leader>4 4gt
+noremap <Leader>5 5gt
+noremap <Leader>6 6gt
+noremap <Leader>7 7gt
+noremap <Leader>8 8gt
+noremap <Leader>9 9gt
+noremap <Leader>0 10gt
 
 " NERDTree commands
-nnoremap <Leader>n :NERDTreeToggle<cr>
+noremap <Leader>n :NERDTreeToggle<cr>
 
+" Let clangd fully control code completion
+let g:ycm_clangd_uses_ycmd_caching = 0
+" Use installed clangd, not YCM-bundled clangd which doesn't get updates.
+let g:ycm_clangd_binary_path = exepath("clangd")
