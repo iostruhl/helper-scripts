@@ -25,7 +25,7 @@ git clone https://github.com/ntpeters/vim-better-whitespace.git ~/.vim/bundle/vi
 git clone https://github.com/bfrg/vim-cpp-modern.git ~/.vim/bundle/vim-cpp-modern
 git clone https://github.com/tpope/vim-fugitive.git ~/.vim/bundle/vim-fugitive
 git clone https://github.com/preservim/nerdtree.git ~/.vim/bundle/nerdtree
-git clone https://github.com/ycm-core/YouCompleteMe.git ~/.vim/bundle/YouCompleteMe
+[ -z "$NOYCM" ] && git clone https://github.com/ycm-core/YouCompleteMe.git ~/.vim/bundle/YouCompleteMe
 
 echo "Running YouCompleteMe install with CXX support only..."
 git -C ~/.vim/bundle/YouCompleteMe submodule update --init --recursive
