@@ -18,15 +18,6 @@ syntax on
 inoremap jk <esc>
 inoremap kj <ESC>
 
-" set tabs to have 4 spaces
-set tabstop=4
-
-" expand tabs into spaces
-set expandtab
-
-" when using the >> or << commands, shift lines by 4 spaces
-set shiftwidth=4
-
 " show matches while searching
 set incsearch
 
@@ -56,6 +47,16 @@ let g:airline_section_warning=''
 let g:better_whitespace_enabled=1
 let g:strip_whitespace_on_save=1
 let g:strip_whitespace_confirm=0
+
+" turn on auto formatting on buffer write
+let g:clang_format#auto_format=1
+" make clang_format read .clang_format
+let g:clang_format#detect_style_file=1
+" ignore default vim format
+let g:clang_enable_format_command=0
+
+let g:clang_format#style_options = {
+            \ "IndentWidth" : 2}
 
 " better windowing
 set splitbelow

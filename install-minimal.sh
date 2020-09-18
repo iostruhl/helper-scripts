@@ -25,6 +25,7 @@ git clone https://github.com/ntpeters/vim-better-whitespace.git ~/.vim/bundle/vi
 git clone https://github.com/bfrg/vim-cpp-modern.git ~/.vim/bundle/vim-cpp-modern
 git clone https://github.com/tpope/vim-fugitive.git ~/.vim/bundle/vim-fugitive
 git clone https://github.com/preservim/nerdtree.git ~/.vim/bundle/nerdtree
+git clone https://github.com/rhysd/vim-clang-format.git ~/.vim/bundle/vim-clang-format
 
 echo "Done."
 
