@@ -3,9 +3,15 @@
 set -e
 
 if [ -d "${HOME}/.vim/autoload" ] || [ -d "${HOME}/.vim/bundle" ]; then
-    echo "Vim install already detected."
-    echo "Run rm -rf ~/.vim/* to clean up first."
-    exit 1
+    echo "Vim install already detected. Remove and reinstall? [yN]"
+    read -n1 response
+    if [ "$response" == "y" ] || [ "$response" == "Y" ]; then
+        echo "Reinstalling."
+        rm -rf ~/.vim/*
+    else
+        echo "Aborting."
+        exit 1
+    fi
 fi
 
 echo "Creating ~/.vim directories..."
@@ -26,6 +32,7 @@ git clone https://github.com/bfrg/vim-cpp-modern.git ~/.vim/bundle/vim-cpp-moder
 git clone https://github.com/tpope/vim-fugitive.git ~/.vim/bundle/vim-fugitive
 git clone https://github.com/preservim/nerdtree.git ~/.vim/bundle/nerdtree
 git clone https://github.com/rhysd/vim-clang-format.git ~/.vim/bundle/vim-clang-format
+git clone https://github.com/vim-scripts/toggle_comment.git ~/.vim/bundle/toggle_comment
 
 echo "Done."
 

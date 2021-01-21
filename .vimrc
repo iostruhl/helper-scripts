@@ -48,16 +48,6 @@ let g:better_whitespace_enabled=1
 let g:strip_whitespace_on_save=1
 let g:strip_whitespace_confirm=0
 
-" turn on auto formatting on buffer write
-let g:clang_format#auto_format=1
-" make clang_format read .clang_format
-let g:clang_format#detect_style_file=1
-" ignore default vim format
-let g:clang_enable_format_command=0
-
-let g:clang_format#style_options = {
-            \ "IndentWidth" : 2}
-
 " better windowing
 set splitbelow
 set splitright
@@ -101,7 +91,9 @@ noremap <Leader>0 10gt
 " NERDTree commands
 noremap <Leader>n :NERDTreeToggle<cr>
 
-" Let clangd fully control code completion
-let g:ycm_clangd_uses_ycmd_caching = 0
-" Use installed clangd, not YCM-bundled clangd which doesn't get updates.
-let g:ycm_clangd_binary_path = exepath("clangd")
+" Run clang format
+noremap <Leader>f :ClangFormat
+
+" Window splitting
+noremap <Leader>s :vsp
+noremap <Leader>t <C-w><C-w>
