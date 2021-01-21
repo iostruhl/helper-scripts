@@ -3,15 +3,8 @@
 set -e
 
 if [ -d "${HOME}/.vim/autoload" ] || [ -d "${HOME}/.vim/bundle" ]; then
-    echo "Vim install already detected. Remove and reinstall? [yN]"
-    read -n1 response
-    if [ "$response" == "y" ] || [ "$response" == "Y" ]; then
-        echo "Reinstalling."
-        rm -rf ~/.vim/*
-    else
-        echo "Aborting."
-        exit 1
-    fi
+    echo "Vim install already detected. Removing and reinstalling."
+    rm -rf ~/.vim/*
 fi
 
 echo "Creating ~/.vim directories..."
