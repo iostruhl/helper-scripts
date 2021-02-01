@@ -92,8 +92,8 @@ noremap <Leader>0 10gt
 noremap <Leader>n :NERDTreeToggle<cr>
 
 " Run clang format
-noremap <Leader>f :ClangFormat
+noremap <Leader>f :ClangFormat<cr>
 
 " Window splitting
-noremap <Leader>s :vsp
+noremap <Leader>s :vsp<cr>
 noremap <Leader>t <C-w><C-w>
