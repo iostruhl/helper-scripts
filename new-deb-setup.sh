@@ -1,9 +1,9 @@
 #! /bin/bash
 
-sudo apt-get update
+set -euxo pipefail
 
-# Install initial requirements.
-sudo apt install git curl vim
+# Install deps for initial setup and python.
+sudo apt-get update && sudo apt-get install git curl vim make build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev libncursesw5-dev xz-utils tk-dev libxml2-dev libxmlsec1-dev libffi-dev liblzma-dev -y
 
 # Vim setup, aliases, and other quality of life.
 curl -SsL iostruhl.com/vimsetup/install.sh | bash
@@ -14,9 +14,6 @@ echo 'alias l="ls -lGgh"' >> ~/.bashrc
 echo 'alias la="ls -lGgah"' >> ~/.bashrc
 echo 'alias mka="vim ~/.bashrc"' >> ~/.bashrc
 echo 'alias src="source ~/.bashrc"' >> ~/.bashrc
-
-# Install python build dependencies.
-sudo apt-get install --no-install-recommends make build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev xz-utils tk-dev libxml2-dev libxmlsec1-dev libffi-dev liblzma-dev
 
 # Install pyenv and pyenv-virtualenv
 git clone https://github.com/pyenv/pyenv.git ~/.pyenv
