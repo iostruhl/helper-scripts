@@ -7,7 +7,7 @@ sudo apt-get update && sudo apt-get install git curl vim make build-essential li
 
 # Install pyenv.
 git clone https://github.com/pyenv/pyenv.git ~/.pyenv
-git clone https://github.com/pyenv/pyenv-virtualenv.git $(pyenv root)/plugins/pyenv-virtualenv
+git clone https://github.com/pyenv/pyenv-virtualenv.git ~/.pyenv/plugins/pyenv-virtualenv
 
 # Vim config.
 curl -SsL iostruhl.com/vimsetup/install.sh | bash
