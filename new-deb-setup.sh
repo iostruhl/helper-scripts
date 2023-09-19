@@ -9,6 +9,7 @@ sudo apt-get update && sudo apt-get install git curl vim make build-essential li
 if [ -d "~/.pyenv" ]; then
   rm -rf ~/.pyenv
 fi
+
 git clone https://github.com/pyenv/pyenv.git ~/.pyenv
 git clone https://github.com/pyenv/pyenv-virtualenv.git ~/.pyenv/plugins/pyenv-virtualenv
 
@@ -34,7 +35,7 @@ eval "$(pyenv virtualenv-init -)"
 parse_git_branch() {
   git branch 2> /dev/null | sed -e "/^[^*]/d" -e "s/* \(.*\)/ (\1)/"
 }
-export PS1="\[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[31m\]$(parse_git_branch)\[\033[00m\]"
+export PS1="\[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[31m\]$(parse_git_branch)\[\033[00m\] "
 ' >> ~/.bashrc
 
 source ~/.bashrc
