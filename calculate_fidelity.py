@@ -1,6 +1,6 @@
 #! /usr/bin/python3
 
-DEFAULT_TARGET = 7500.0
+DEFAULT_TARGET = 6000.0
 
 current_balance = float(input("Current balance: "))
 target_balance = input(f"Target balance ({DEFAULT_TARGET:.2f}): ")
